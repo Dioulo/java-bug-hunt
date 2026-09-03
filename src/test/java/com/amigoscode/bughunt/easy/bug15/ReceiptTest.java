@@ -11,6 +11,8 @@ class ReceiptTest {
         Receipt r = new Receipt();
         String line = r.addLine("coffee", 2, 3.50);
 
+        // Le nom de l'article est aligné à gauche sur 12 caractères, puis viennent la quantité et le prix unitaire.
+        // Les montants utilisent deux décimales séparées par une virgule, et le total correspond à quantité × prix.
         assertThat(line).isEqualTo("coffee       x2 @ $3,50 = $7,00");
     }
 
