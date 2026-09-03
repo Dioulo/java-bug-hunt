@@ -2,6 +2,7 @@ package com.amigoscode.bughunt.easy.bug15;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 public class Receipt {
 
@@ -16,7 +17,7 @@ public class Receipt {
         double lineTotal = quantity * unitPrice;
         grandTotal += lineTotal;
         String formatted = String.format(
-                "%-12s x%d @ $%d = $%.2f",
+                "%-12s x%d @ $%.2f = $%.2f",
                 item, quantity, unitPrice, lineTotal);
         lines.add(formatted);
         return formatted;
